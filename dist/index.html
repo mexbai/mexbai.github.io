@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>mexb.ai</title>
+    <style>
+        @font-face {
+            font-family: 'Exo2';
+            src: url('fonts/Exo2-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #e2f4f6;
+            color: #3b5d5f;
+            font-family: 'Exo2', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            min-height: 100vh;
+        }
+
+        header {
+            display: grid;
+            gap: 0;
+            grid-template-columns: auto auto;
+            font-size: 6rem;
+            cursor: pointer;
+        }
+
+        header > * {
+            border: 0.5rem solid transparent;
+            height: 8rem;
+            padding: 0 1rem;
+            transition: all 150ms linear;
+        }
+
+        header > .mexb {
+            border: 0.5rem solid #3b5d5f;
+        }
+
+        header > .ai {
+            border-left-width: 0;
+        }
+
+        header:hover > .mexb, header:focus > .mexb {
+            background-color: #3b5d5f;
+            color: #e2f4f6;
+        }
+        header:hover > .ai {
+            border-top-color: #3b5d5f;
+            border-right-color: #3b5d5f;
+            border-bottom-color: #3b5d5f;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="mexb">mexb</div>
+            <div class="ai">ai</div>
+        </header>
+        <p>coming soon</p>
+    </main>
+</body>
+</html>
