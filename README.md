@@ -1,2 +1,3 @@
-# website
-github page
+# mexb.ai website
+
+hosted with github page
