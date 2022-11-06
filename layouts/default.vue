@@ -7,7 +7,11 @@
     >
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="~assets/buefy.png" alt="Buefy" height="28" />
+          <img
+            src="https://buefy.org/static/img/buefy-light.7df103a.png"
+            alt="Buefy"
+            height="28"
+          />
         </a>
 
         <div class="navbar-burger">
@@ -49,7 +53,7 @@ export default {
           to: { name: 'index' },
         },
         {
-          title: 'Inspire',
+          title: 'Team',
           icon: 'lightbulb',
           to: { name: 'inspire' },
         },
