@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// bulma variables
+$primary: #3b5c61;
+$background: #e2f4f6;
+
+// Import bulma styles
+@import '~bulma';
+
+// Import buefy styles
+@import '~buefy/src/scss/buefy';
+
+// own styles
+html {
+  background-color: $background;
+}
