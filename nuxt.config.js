@@ -58,6 +58,6 @@ export default {
 
   buefy: {
     css: false,
-    materialDesignIcons: false,
+    materialDesignIcons: true,
   },
 }
