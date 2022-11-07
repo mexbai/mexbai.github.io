@@ -7,11 +7,7 @@
     >
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img
-            src="https://buefy.org/static/img/buefy-light.7df103a.png"
-            alt="Buefy"
-            height="28"
-          />
+          <logo />
         </a>
 
         <div class="navbar-burger">
@@ -42,8 +38,13 @@
 </template>
 
 <script>
+import Logo from '~/components/Logo.vue'
+
 export default {
   name: 'DefaultLayout',
+  components: {
+    Logo,
+  },
   data() {
     return {
       items: [
