@@ -1,7 +1,7 @@
 <template>
-  <div class="columns mexbai-logo">
-    <div class="column mexb">mexb</div>
-    <div class="column ai">ai</div>
+  <div class="mexbai-logo">
+    <div class="mexb">mexb</div>
+    <div class="ai">ai</div>
   </div>
 </template>
 
@@ -23,6 +23,9 @@ export default {
 .mexbai-logo {
   font-family: 'Exo2', sans-serif;
   padding: 0.25em;
+  display: grid;
+  gap: 0;
+  grid-template-columns: auto auto;
 }
 
 .mexb,
