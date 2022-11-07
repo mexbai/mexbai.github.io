@@ -1,16 +1,20 @@
 <template>
   <div>
-    <nav
-      class="navbar header has-shadow is-primary"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <logo />
-        </a>
+    <nav class="navbar header has-shadow is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-start">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <logo />
+          </a>
+        </div>
 
-        <div @click="menuExpanded = !menuExpanded" class="navbar-burger">
+        <NuxtLink v-for="(item, key) of items" :key="key" :to="item.to" exact-active-class="is-active" class="navbar-item is-hidden-touch">
+          {{ item.title }}
+        </NuxtLink>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-burger" @click="menuExpanded = !menuExpanded">
           <span />
           <span />
           <span />
@@ -59,14 +63,19 @@ export default {
       menuExpanded: false,
       items: [
         {
-          title: 'Home',
+          title: 'our mission',
           icon: 'home',
-          to: { name: 'index' },
+          to: { name: 'mission' },
         },
         {
-          title: 'Team',
+          title: 'team',
           icon: 'lightbulb',
-          to: { name: 'inspire' },
+          to: { name: 'team' },
+        },
+        {
+          title: 'contact',
+          icon: 'book',
+          to: { name: 'contact' },
         },
       ],
     }
