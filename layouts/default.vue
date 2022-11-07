@@ -16,7 +16,7 @@
       <div class="navbar-end is-hidden-touch">
         <div class="navbar-item">
           <div class="buttons">
-            <button class="button">
+            <button class="button is-info">
               <span>try now</span>
               <b-icon icon="telegram" />
             </button>
