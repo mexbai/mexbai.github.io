@@ -1,6 +1,10 @@
 <template>
   <div>
-    <nav class="navbar header has-shadow is-primary is-flex" role="navigation" aria-label="main navigation">
+    <nav
+      class="navbar header has-shadow is-primary is-flex"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div class="navbar-start">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
@@ -8,7 +12,13 @@
           </a>
         </div>
 
-        <NuxtLink v-for="(item, key) of items" :key="key" :to="item.to" exact-active-class="is-active" class="navbar-item is-hidden-touch">
+        <NuxtLink
+          v-for="(item, key) of items"
+          :key="key"
+          :to="item.to"
+          exact-active-class="is-active"
+          class="navbar-item is-hidden-touch"
+        >
           {{ item.title }}
         </NuxtLink>
       </div>
@@ -24,14 +34,20 @@
         </div>
       </div>
 
-      <div class="navbar-burger is-align-self-center" @click="menuExpanded = !menuExpanded">
+      <div
+        class="navbar-burger is-align-self-center"
+        @click="menuExpanded = !menuExpanded"
+      >
         <span />
         <span />
         <span />
       </div>
     </nav>
 
-    <aside v-if="menuExpanded" class="column is-3 mobile-menu is-overlay has-background-primary-light is-hidden-desktop">
+    <aside
+      v-if="menuExpanded"
+      class="column is-3 mobile-menu is-overlay has-background-primary-light is-hidden-desktop"
+    >
       <p class="menu-label is-hidden-touch">General</p>
       <ul class="menu-list">
         <li v-for="(item, key) of items" :key="key">
@@ -50,9 +66,7 @@
 
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>
-          copyright 2022 by <strong>mexb.ai</strong>
-        </p>
+        <p>copyright 2022 by <strong>mexb.ai</strong></p>
       </div>
     </footer>
   </div>
