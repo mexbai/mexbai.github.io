@@ -103,6 +103,186 @@ export default {
       ],
     }
   },
+  head() {
+    return {
+      title: 'mexb.ai',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: '/favicon/favicon-16x16.png',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '96x96',
+          href: '/favicon/favicon-96x96.png',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon/favicon-32x32.png',
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '192x192',
+          href: '/favicon/android-icon-192x192.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '180x180',
+          href: '/favicon/apple-icon-180x180.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '152x152',
+          href: '/favicon/apple-icon-152x152.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '144x144',
+          href: '/favicon/apple-icon-144x144.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '152x152',
+          href: '/favicon/apple-icon-152x152.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '144x144',
+          href: '/favicon/apple-icon-144x144.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '120x120',
+          href: '/favicon/apple-icon-120x120.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '114x114',
+          href: '/favicon/apple-icon-114x114.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '76x76',
+          href: '/favicon/apple-icon-76x76.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '72x72',
+          href: '/favicon/apple-icon-72x72.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '60x60',
+          href: '/favicon/apple-icon-60x60.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '57x57',
+          href: '/favicon/apple-icon-57x57.png',
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          sizes: '120x120',
+          href: '/favicon/apple-icon-120x120.png',
+        },
+      ],
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'mexb.ai — the future of AI chatbots',
+        },
+        {
+          hid: 'msapplication-TileColor',
+          name: 'msapplication-TileColor',
+          content: '#e2f4f6',
+        },
+        {
+          hid: 'msapplication-TileImage',
+          name: 'msapplication-TileImage',
+          content: '/favicon/ms-icon-144x144.png',
+        },
+        {
+          hid: 'theme-color',
+          name: 'theme-color',
+          content: '#e2f4f6',
+        },
+        // {
+        //   hid: 'og:title',
+        //   property: 'og:title',
+        //   content: 'mexb.ai',
+        // },
+        // {
+        //   hid: 'og:description',
+        //   property: 'og:description',
+        //   content: 'mexb.ai — the future of AI chatbots',
+        // },
+        // {
+        //   hid: 'og:image',
+        //   property: 'og:image',
+        //   content: 'https://mexb.ai/og-image.png',
+        // },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://mexb.ai',
+        },
+        // {
+        //   hid: 'twitter:card',
+        //   name: 'twitter:card',
+        //   content: 'summary_large_image',
+        // },
+        {
+          hid: 'twitter:site',
+          name: 'twitter:site',
+          content: '@mexbai',
+        },
+        {
+          hid: 'twitter:creator',
+          name: 'twitter:creator',
+          content: '@mexbai',
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'mexb.ai',
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: 'mexb.ai — the future of AI chatbots',
+        },
+        // {
+        //   hid: 'twitter:image',
+        //   name: 'twitter:image',
+        //   content: 'https://mexb.ai/og-image.png',
+        // }
+      ],
+    }
+  },
 }
 </script>
 
