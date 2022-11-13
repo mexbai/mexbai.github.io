@@ -1,7 +1,7 @@
 <template>
   <div class="mexbai-logo">
-    <div class="mexb">mexb</div>
-    <div class="ai">ai</div>
+    <div class="mexb"><span>mexb</span></div>
+    <div class="ai"><span>ai</span></div>
   </div>
 </template>
 
@@ -26,6 +26,7 @@ export default {
   display: grid;
   gap: 0;
   grid-template-columns: auto auto;
+  line-height: 1.25;
 }
 
 .mexb,
@@ -49,4 +50,10 @@ export default {
 .mexbai-logo:hover .ai {
   border-color: unset;
 }
+
+div.mexb > span,
+div.ai > span {
+    position: relative;
+    bottom: 0.1em;
+  }
 </style>
