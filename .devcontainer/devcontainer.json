@@ -9,11 +9,7 @@
   "remoteUser": "node",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "Vue.volar",
-        "allanoricil.nuxt-vscode-extension",
-        "eamodio.gitlens"
-      ]
+      "extensions": ["Vue.volar", "allanoricil.nuxt-vscode-extension", "eamodio.gitlens"]
     }
   }
 }

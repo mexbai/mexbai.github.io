@@ -3,12 +3,8 @@
     <section class="hero is-fullheight is-primary">
       <div class="hero-body slogan">
         <div class="container has-text-centered">
-          <p class="title">
-            heal your mind
-          </p>
-          <p class="title">
-            shape your future
-          </p>
+          <p class="title">heal your mind</p>
+          <p class="title">shape your <i>future</i>.</p>
         </div>
       </div>
 
@@ -26,8 +22,13 @@
               </a>
             </div>
 
-            <NuxtLink v-for="(item, key) of items" :key="key" :to="item.to" exact-active-class="is-active"
-              class="navbar-item is-hidden-touch">
+            <NuxtLink
+              v-for="(item, key) of items"
+              :key="key"
+              :to="item.to"
+              exact-active-class="is-active"
+              class="navbar-item is-hidden-touch"
+            >
               {{ item.title }}
             </NuxtLink>
           </div>
@@ -52,12 +53,14 @@
       </div>
     </section>
 
-    <aside v-if="menuExpanded"
-      class="column is-3 mobile-menu is-overlay has-background-primary-light is-hidden-desktop">
+    <aside
+      v-if="menuExpanded"
+      class="column is-3 mobile-menu is-overlay has-background-primary-light is-hidden-desktop"
+    >
       <p class="menu-label is-hidden-touch">General</p>
       <ul class="menu-list">
         <li v-for="(item, key) of items" :key="key">
-          <NuxtLink :to="item.to" exact-active-class="is-active">
+          <NuxtLink :to="item.to" exact-ac0tive-class="is-active">
             <b-icon :icon="item.icon" /> {{ item.title }}
           </NuxtLink>
         </li>

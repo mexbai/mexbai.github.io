@@ -53,7 +53,7 @@ export default {
 
 div.mexb > span,
 div.ai > span {
-    position: relative;
-    bottom: 0.1em;
-  }
+  position: relative;
+  bottom: 0.1em;
+}
 </style>
