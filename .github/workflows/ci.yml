@@ -1,4 +1,7 @@
 name: ci
+branding:
+  icon: 'globe'
+  color: 'white'
 
 on:
   push:
@@ -13,9 +16,6 @@ on:
 jobs:
   ci:
     runs-on: ${{ matrix.os }}
-    branding:
-      icon: 'globe'
-      color: 'white'
 
     strategy:
       matrix:
