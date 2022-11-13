@@ -1,53 +1,59 @@
 <template>
   <div>
-    <nav
-      class="navbar header has-shadow is-primary is-flex"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-start">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <logo />
-          </a>
+    <section class="hero is-fullheight is-primary">
+      <div class="hero-body slogan">
+        <div class="container has-text-centered">
+          <p class="title">
+            heal your mind
+          </p>
+          <p class="title">
+            shape your future
+          </p>
         </div>
+      </div>
 
-        <NuxtLink
-          v-for="(item, key) of items"
-          :key="key"
-          :to="item.to"
-          exact-active-class="is-active"
-          class="navbar-item is-hidden-touch"
+      <div class="hero-foot">
+        <nav
+          id="menu"
+          class="navbar header has-shadow is-priamry is-flex"
+          role="navigation"
+          aria-label="main navigation"
         >
-          {{ item.title }}
-        </NuxtLink>
-      </div>
+          <div class="navbar-start">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">
+                <logo />
+              </a>
+            </div>
 
-      <div class="navbar-end is-hidden-touch">
-        <div class="navbar-item">
-          <div class="buttons">
-            <button class="button is-info">
-              <span>try now</span>
-              <b-icon icon="telegram" />
-            </button>
+            <NuxtLink v-for="(item, key) of items" :key="key" :to="item.to" exact-active-class="is-active"
+              class="navbar-item is-hidden-touch">
+              {{ item.title }}
+            </NuxtLink>
           </div>
-        </div>
-      </div>
 
-      <div
-        class="navbar-burger is-align-self-center"
-        @click="menuExpanded = !menuExpanded"
-      >
-        <span />
-        <span />
-        <span />
-      </div>
-    </nav>
+          <div class="navbar-end is-hidden-touch">
+            <div class="navbar-item">
+              <div class="buttons">
+                <button class="button is-info">
+                  <span>try now</span>
+                  <b-icon icon="telegram" />
+                </button>
+              </div>
+            </div>
+          </div>
 
-    <aside
-      v-if="menuExpanded"
-      class="column is-3 mobile-menu is-overlay has-background-primary-light is-hidden-desktop"
-    >
+          <div class="navbar-burger is-align-self-center" @click="menuExpanded = !menuExpanded">
+            <span />
+            <span />
+            <span />
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <aside v-if="menuExpanded"
+      class="column is-3 mobile-menu is-overlay has-background-primary-light is-hidden-desktop">
       <p class="menu-label is-hidden-touch">General</p>
       <ul class="menu-list">
         <li v-for="(item, key) of items" :key="key">
@@ -287,6 +293,12 @@ export default {
 </script>
 
 <style scoped>
+.slogan {
+  background: url('~/assets/imgs/aaron-burden-c4fynAqSQic-unsplash.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .navbar-brand {
   font-size: 1.5rem;
 }
