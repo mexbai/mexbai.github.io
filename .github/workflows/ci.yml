@@ -1,9 +1,5 @@
 name: ci
 
-branding:
-  icon: 'globe'
-  color: 'white'
-
 on:
   push:
     branches:
