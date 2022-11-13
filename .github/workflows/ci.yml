@@ -13,11 +13,14 @@ on:
 jobs:
   ci:
     runs-on: ${{ matrix.os }}
+    branding:
+      icon: 'globe'
+      color: 'white'
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [lts/*]
+        node: [16]
 
     steps:
       - name: Checkout 🛎
@@ -31,7 +34,7 @@ jobs:
 
       - name: Get yarn cache directory path 🛠
         id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
       - name: Cache node_modules 📦
         uses: actions/cache@v2.1.7
