@@ -38,14 +38,6 @@
     .slideInFromRight {
       animation-name: slideInFromRight;
     }
-
-    /* .invisible {
-      visibility: hidden;
-    } */
-
-    .is-visible {
-      visibility: visible !important;
-    }
   </style>
 </head>
 
@@ -133,7 +125,7 @@
   </section>
 
   <!-- MORE CONTENT -->
-  <section class="section animated invisible">
+  <section class="section animated">
     <div class="container">
       <div class="columns is-vcentered">
         <div class="column is-5">
@@ -160,7 +152,7 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section class="section is-light animated invisible">
+  <section class="section is-light animated">
     <div class="container">
       <h2 class="title is-2 has-text-centered">
         What Our Customers Are Saying
@@ -231,7 +223,11 @@
       elems.forEach((element, index) => {
         const isEven = index % 2 === 0;
         const toggleClass = isEven ? 'slideInFromLeft' : 'slideInFromRight';
-        if (window.scrollY > element.offsetTop - window.innerHeight) {
+        const scrollMin = window.scrollY;
+        const scrollMax = scrollMin + window.innerHeight;
+        const elemMin = element.offsetTop;
+        const elemMax = elemMin + element.offsetHeight;
+        if (scrollMax > elemMin && scrollMin < elemMax) {
           element.classList.add(toggleClass);
         } else {
           element.classList.remove(toggleClass);
