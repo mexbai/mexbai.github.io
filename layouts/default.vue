@@ -9,12 +9,8 @@
       </div>
 
       <div class="hero-foot">
-        <nav
-          id="menu"
-          class="navbar header has-shadow is-priamry is-flex"
-          role="navigation"
-          aria-label="main navigation"
-        >
+        <nav id="menu" class="navbar header has-shadow is-priamry is-flex" role="navigation"
+          aria-label="main navigation">
           <div class="navbar-start">
             <div class="navbar-brand">
               <a class="navbar-item" href="/">
@@ -22,13 +18,8 @@
               </a>
             </div>
 
-            <NuxtLink
-              v-for="(item, key) of items"
-              :key="key"
-              :to="item.to"
-              exact-active-class="is-active"
-              class="navbar-item is-hidden-touch"
-            >
+            <NuxtLink v-for="(item, key) of items" :key="key" :to="item.to" exact-active-class="is-active"
+              class="navbar-item is-hidden-touch">
               {{ item.title }}
             </NuxtLink>
           </div>
@@ -36,10 +27,10 @@
           <div class="navbar-end is-hidden-touch">
             <div class="navbar-item">
               <div class="buttons">
-                <button class="button is-info">
+                <a class="button is-info" href="https://t.me/mentalhealthsupport_bot" target="_blank">
                   <span>try now</span>
                   <b-icon icon="telegram" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -53,15 +44,13 @@
       </div>
     </section>
 
-    <aside
-      v-if="menuExpanded"
-      class="column is-3 mobile-menu is-overlay has-background-primary-light is-hidden-desktop"
-    >
+    <aside v-if="menuExpanded"
+      class="column is-3 mobile-menu is-overlay has-background-primary-light is-hidden-desktop">
       <p class="menu-label is-hidden-touch">General</p>
       <ul class="menu-list">
         <li v-for="(item, key) of items" :key="key">
           <NuxtLink :to="item.to" exact-ac0tive-class="is-active">
-            <b-icon :icon="item.icon" /> {{ item.title }}
+            <b-icon v-if="item.icon" :icon="item.icon" /> {{ item.title }}
           </NuxtLink>
         </li>
       </ul>
@@ -96,16 +85,26 @@ export default {
         {
           title: 'our mission',
           icon: 'home',
-          to: { name: 'mission' },
+          to: { path: '/', hash: '#mission' },
+        },
+        {
+          title: 'product',
+          icon: 'chat',
+          to: { path: '/', hash: '#product' },
+        },
+        {
+          title: 'testimonials',
+          icon: 'account-multiple-check',
+          to: { path: '/', hash: '#TESTIMONIALS' },
         },
         {
           title: 'team',
-          icon: 'lightbulb',
-          to: { name: 'team' },
+          icon: 'human-female-female',
+          to: { path: '/', hash: '#team' },
         },
         {
           title: 'contact',
-          icon: 'book',
+          icon: 'card-account-mail',
           to: { name: 'contact' },
         },
       ],
@@ -291,6 +290,30 @@ export default {
       ],
     }
   },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const elems = document.querySelectorAll('.slideIn');
+      elems.forEach((element, index) => {
+        const isEven = index % 2 === 0;
+        const toggleClass = isEven ? 'slideInFromLeft' : 'slideInFromRight';
+        const scrollMin = window.scrollY;
+        const scrollMax = scrollMin + window.innerHeight;
+        const elemMin = element.offsetTop;
+        const elemMax = elemMin + element.offsetHeight;
+        if (scrollMax > elemMin && scrollMin < elemMax) {
+          element.classList.add(toggleClass);
+        } else {
+          element.classList.remove(toggleClass);
+        }
+      });
+    }
+  }
 }
 </script>
 
@@ -313,5 +336,40 @@ export default {
   position: absolute;
   top: 4rem;
   z-index: 10;
+}
+
+/* Animation */
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(+100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slideIn {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.slideInFromLeft {
+  animation-name: slideInFromLeft;
+}
+
+.slideInFromRight {
+  animation-name: slideInFromRight;
 }
 </style>
