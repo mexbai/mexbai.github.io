@@ -56,10 +56,8 @@
       </ul>
     </aside>
 
-    <section class="main-content columns">
-      <main class="container column is-10">
-        <Nuxt />
-      </main>
+    <section class="main-content">
+      <Nuxt />
     </section>
 
     <footer class="footer">
@@ -84,7 +82,7 @@ export default {
       items: [
         {
           title: 'our mission',
-          icon: 'home',
+          icon: 'flag-checkered',
           to: { path: '/', hash: '#mission' },
         },
         {
@@ -95,7 +93,7 @@ export default {
         {
           title: 'testimonials',
           icon: 'account-multiple-check',
-          to: { path: '/', hash: '#TESTIMONIALS' },
+          to: { path: '/', hash: '#testimonials' },
         },
         {
           title: 'team',
@@ -317,7 +315,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .slogan {
   background: url('~/assets/imgs/aaron-burden-c4fynAqSQic-unsplash.jpg') no-repeat center center;
   background-size: cover;
