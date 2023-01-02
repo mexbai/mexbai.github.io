@@ -56,7 +56,7 @@
       </ul>
     </aside>
 
-    <section class="main-content">
+    <section class="content">
       <Nuxt />
     </section>
 
@@ -103,7 +103,7 @@ export default {
         {
           title: 'contact',
           icon: 'card-account-mail',
-          to: { name: 'contact' },
+          to: { name: 'contact', hash: '#menu' },
         },
       ],
     }
@@ -302,8 +302,9 @@ export default {
         const toggleClass = isEven ? 'slide-in-from-left' : 'slide-in-from-right';
         const scrollMin = window.scrollY;
         const scrollMax = scrollMin + window.innerHeight;
-        const elemMin = element.offsetTop;
-        const elemMax = elemMin + element.offsetHeight;
+        const padding = 48; // 3rem
+        const elemMin = element.getBoundingClientRect().top + padding;  // element.offsetTop;
+        const elemMax = elemMin + element.offsetHeight - padding;
         if (scrollMax > elemMin && scrollMin < elemMax) {
           element.classList.add(toggleClass);
         } else if (element.classList.contains(toggleClass)) {
