@@ -298,17 +298,17 @@ export default {
   },
   methods: {
     handleScroll() {
-      const elems = document.querySelectorAll('.slideIn');
+      const elems = document.querySelectorAll('.slide-in');
       elems.forEach((element, index) => {
         const isEven = index % 2 === 0;
-        const toggleClass = isEven ? 'slideInFromLeft' : 'slideInFromRight';
+        const toggleClass = isEven ? 'slide-in-from-left' : 'slide-in-from-right';
         const scrollMin = window.scrollY;
         const scrollMax = scrollMin + window.innerHeight;
         const elemMin = element.offsetTop;
         const elemMax = elemMin + element.offsetHeight;
         if (scrollMax > elemMin && scrollMin < elemMax) {
           element.classList.add(toggleClass);
-        } else {
+        } else if (element.classList.contains(toggleClass)) {
           element.classList.remove(toggleClass);
         }
       });
@@ -340,7 +340,7 @@ export default {
 
 /* Animation */
 
-@keyframes slideInFromLeft {
+@keyframes slide-in-from-left {
   from {
     transform: translateX(-100%);
   }
@@ -350,7 +350,7 @@ export default {
   }
 }
 
-@keyframes slideInFromRight {
+@keyframes slide-in-from-right {
   from {
     transform: translateX(+100%);
   }
@@ -360,16 +360,16 @@ export default {
   }
 }
 
-.slideIn {
+.slide-in {
   animation-duration: 1s;
   animation-fill-mode: both;
 }
 
-.slideInFromLeft {
-  animation-name: slideInFromLeft;
+.slide-in-from-left {
+  animation-name: slide-in-from-left;
 }
 
-.slideInFromRight {
-  animation-name: slideInFromRight;
+.slide-in-from-right {
+  animation-name: slide-in-from-right;
 }
 </style>
