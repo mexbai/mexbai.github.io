@@ -306,7 +306,8 @@ export default {
         const elemMin = element.getBoundingClientRect().top + padding;  // element.offsetTop;
         const elemMax = elemMin + element.offsetHeight - padding;
         if (scrollMax > elemMin && scrollMin < elemMax) {
-          element.classList.add(toggleClass);
+          if (!element.classList.contains(toggleClass))
+            element.classList.add(toggleClass);
         } else if (element.classList.contains(toggleClass)) {
           element.classList.remove(toggleClass);
         }
