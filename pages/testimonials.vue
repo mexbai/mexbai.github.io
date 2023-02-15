@@ -1,7 +1,8 @@
 <template>
     <section id="testimonials" class="section slide-in">
-        <h2 class="title is-3 has-text-primary">What expertas say about us <b-icon icon="account-multiple-check"
-                size="is-large" /></h2>
+        <h2 class="title is-3 has-text-primary">What expertas say about us
+            <b-icon icon="account-multiple-check" size="is-large" />
+        </h2>
         <h3 class="subtitle is-6 has-text-grey">
             What drives us to do what we do
         </h3>
